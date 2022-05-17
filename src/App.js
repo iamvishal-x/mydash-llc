@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Signup from "./Pages/Signup/Signup";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   const PrivateRoute = ({ component: Component, ...rest }) => {

@@ -26,7 +26,6 @@ const Dashboard = () => {
     <>
       <Navbar />
       <div className="dashboard">
-        <h2>My Dash LLC</h2>
         <button onClick={changeData}>Change Data</button>
         <BarChart width={600} height={400} data={data} />
       </div>

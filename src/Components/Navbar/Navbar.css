@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #f8f8fa;
   height: 60px;
-  padding: 0 5rem;
+  padding: 0 9rem;
 }
 .navbar__logo {
   margin-right: auto;
@@ -25,11 +25,12 @@
 }
 
 .navbar__header button {
-  padding: 5px 30px;
+  padding: 10px 30px;
   border-radius: 10px;
   cursor: pointer;
   border: none;
   color: white;
   font-size: 19px;
   background-image: url(../../Images/abstract.png);
+  background-size: cover;
 }

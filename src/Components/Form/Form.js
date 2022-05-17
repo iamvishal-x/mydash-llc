@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
 
@@ -23,7 +23,7 @@ const Form = () => {
     rePassword: "",
     name: "",
     number: "",
-    tnc: true,
+    tnc: "",
   });
 
   const handleChange = (e) => {
@@ -35,7 +35,7 @@ const Form = () => {
       if (e.target.value.length > 30) return;
     }
     if (e.target.name === "name") {
-      if (e.target.value.length > 30) return;
+      if (e.target.value.length > 20) return;
     }
     if (e.target.name === "password" || e.target.name === "rePassword") {
       if (e.target.value.length > 20) return;
@@ -63,6 +63,9 @@ const Form = () => {
     }
     if (!emailRegEx.test(data.email)) {
       errorsCopy.email = "Please enter a valid email";
+    }
+    if (!nameRegEx.test(data.name)) {
+      errorsCopy.name = "Please enter correct name";
     }
     if (!data.password || !data.rePassword) {
       errorsCopy.password = "Password does not match";

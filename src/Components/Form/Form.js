@@ -67,13 +67,13 @@ const Form = () => {
     if (!nameRegEx.test(data.name)) {
       errorsCopy.name = "Please enter correct name";
     }
-    if (!data.password || !data.rePassword) {
-      errorsCopy.password = "Password does not match";
-      errorsCopy.rePassword = "Password does not match";
-    }
     if (data.password !== data.rePassword) {
       errorsCopy.password = "Password does not match";
       errorsCopy.rePassword = "Password does not match";
+    }
+    if (data.password.length < 5 || data.rePassword.length < 5) {
+      errorsCopy.password = "Password should be minimum 5 length";
+      errorsCopy.rePassword = "Password should be minimum 5 length";
     }
     if (data.tnc === false) {
       errorsCopy.tnc = "Please agree to our T&C's";
@@ -108,7 +108,7 @@ const Form = () => {
           <div className="form__item">
             <label className="form__label"> Your password </label>
             <input
-              // required
+              required
               type="password"
               className="form__input"
               name="password"

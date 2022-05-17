@@ -1,5 +1,4 @@
 .signup {
-  /* min-height: 100vh; */
   display: flex;
 }
 
@@ -7,7 +6,6 @@
   flex-grow: 1;
 }
 .signup--form {
-  /* min-height: 100vh; */
   width: 60%;
   margin: 3rem 5rem 0;
 }
